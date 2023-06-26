@@ -1,0 +1,143 @@
+:root {
+  --main-color: #181818;
+  --secondary-color: #db2039;
+  --text-color: #ffffffff;
+}
+
+body {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  height: 100%;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+}
+
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 6rem;
+  background-color: var(--main-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.sidebar-header {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.sidebar > div {
+  height: 60px;
+  width: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.sidebar > div:hover {
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+.layout {
+  margin-left: 6rem;
+  height: 100vh;
+  display: grid;
+  grid-template: 3rem 1fr 4rem / 1fr;
+  overflow-y: auto;
+}
+
+.header {
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+.main {
+  background-color: royalblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  background-color: cadetblue;
+}
+
+.game-wrapper {
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  font-size: 20px;
+}
+
+.modal-content {
+  background-color: var(--main-color);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 200;
+  width: 25%;
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-form label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.modal-form input[type="text"],
+.modal-form input[type="password"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.modal-form input[type="submit"] {
+  background-color: #3b82f6;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.modal-form input[type="submit"]:hover {
+  background-color: #1d4ed8;
+}
